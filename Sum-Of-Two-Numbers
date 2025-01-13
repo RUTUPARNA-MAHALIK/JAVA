@@ -11,3 +11,89 @@ public class SumOfTwoNumbers {
         System.out.println("Sum: " + (num1 + num2));
     }
 }
+
+#1.Basic Input and Output using Scanner
+
+import java.util.Scanner;
+
+public class SumTwoNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
+        
+        int sum = num1 + num2;
+        System.out.println("Sum: " + sum);
+    }
+}
+
+
+#2.Using a Method
+
+import java.util.Scanner;
+
+public class SumMethod {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
+
+        int sum = calculateSum(num1, num2);
+        System.out.println("Sum: " + sum);
+    }
+
+    public static int calculateSum(int a, int b) {
+        return a + b;
+    }
+}
+
+#3.Using Command-Line Arguments
+
+public class SumCommandLine {
+    public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Please provide two numbers as command-line arguments.");
+            return;
+        }
+
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+
+        int sum = num1 + num2;
+        System.out.println("Sum: " + sum);
+    }
+}
+
+#4.Using Streams
+
+import java.util.Arrays;
+
+public class SumUsingStreams {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20};
+        int sum = Arrays.stream(numbers).sum();
+        System.out.println("Sum: " + sum);
+    }
+}
+
+#5.Using Recursion
+
+public class SumRecursion {
+    public static void main(String[] args) {
+        int num1 = 15, num2 = 25;
+        int sum = sum(num1, num2);
+        System.out.println("Sum: " + sum);
+    }
+
+    public static int sum(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return sum(a + 1, b - 1);
+        }
+    }
+}
