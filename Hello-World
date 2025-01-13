@@ -1,7 +1,19 @@
 #My First hello-world program
 
+# First Way
 public class HelloWorld {
     public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+# Second Way
+public class HelloWorldMethod {
+    public static void main(String[] args) {
+        printMessage();
+    }
+
+    public static void printMessage() {
         System.out.println("Hello, World!");
     }
 }
