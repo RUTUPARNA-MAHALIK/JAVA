@@ -1,0 +1,95 @@
+# 1: Using if-else
+
+import java.util.Scanner;
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        if (num % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+}
+
+#2: Using Ternary Operator
+
+import java.util.Scanner;
+public class EvenOddTernary {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        System.out.println(num % 2 == 0 ? "Even" : "Odd");
+    }
+}
+
+#3: Using Bitwise Operator
+
+import java.util.Scanner;
+public class EvenOddBitwise {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        System.out.println((num & 1) == 0 ? "Even" : "Odd");
+    }
+}
+
+#4. Using switch Statement
+
+import java.util.Scanner;
+public class EvenOddSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        switch (num % 2) {
+            case 0:
+                System.out.println(num + " is Even");
+                break;
+            case 1:
+                System.out.println(num + " is Odd");
+                break;
+        }
+    }
+}
+
+#5. Using Streams 
+
+import java.util.stream.IntStream;
+
+public class EvenOddStream {
+    public static void main(String[] args) {
+        int num = 5;  // Example number
+        String result = IntStream.of(num)
+                                 .mapToObj(n -> n % 2 == 0 ? "Even" : "Odd")
+                                 .findFirst()
+                                 .orElse("Unknown");
+        System.out.println(num + " is " + result);
+    }
+}
+
+#6. Using a Method
+
+import java.util.Scanner;
+public class EvenOddMethod {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        checkEvenOdd(num);
+    }
+
+    public static void checkEvenOdd(int num) {
+        if (num % 2 == 0) {
+            System.out.println(num + " is Even");
+        } else {
+            System.out.println(num + " is Odd");
+        }
+    }
+}
