@@ -93,3 +93,18 @@ public class EvenOddMethod {
         }
     }
 }
+
+
+#7. Using Recursion
+public class EvenOddRecursion {
+    public static void main(String[] args) {
+        int num = 9;  // Example number
+        System.out.println(num + " is " + checkEvenOdd(num));
+    }
+
+    public static String checkEvenOdd(int num) {
+        if (num == 0) return "Even";
+        if (num == 1) return "Odd";
+        return checkEvenOdd(num - 2);
+    }
+}
